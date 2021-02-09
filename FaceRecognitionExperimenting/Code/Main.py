@@ -1,13 +1,11 @@
-from Recognition import Recognition
-from Recognition import name
-from Recognition import pil_image
+from VideoRecognition import VidRecognition
 from GUI import InitializeTkinter
 
+AccessMain = VidRecognition()
 
-if name == "Obama":
+
+if AccessMain == True:
     print("access granted")
     InitializeTkinter()
 else:
     print("acces denied")
-
-pil_image.show()

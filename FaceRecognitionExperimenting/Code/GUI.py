@@ -19,12 +19,12 @@ def InitializeTkinter():
     )
 
     label = tk.Label(
-        text="ACCESS GRANTED!",
-        font=("Courier", 44),
-        fg="white",
-        bg="#017835",
-        width=screenwidth,
-        height=screenheight
+    text="ACCESS GRANTED!",
+    font=("Courier", 44),
+    fg="white",
+    bg="#017835",
+    width=screenwidth,
+    height=screenheight
     )
 
     

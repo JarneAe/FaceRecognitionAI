@@ -65,7 +65,7 @@ def Recognition():
     for(top,right,bottom,left), face_encodings in zip(face_locations,face_encodings):
         matches = face_recognition.compare_faces(known_face_encodings, face_encodings)
 
-        name = "Unkown"
+        name = "Unidentified User"
 
         if True in matches:
             first_match_index = matches.index(True)
