@@ -1,7 +1,7 @@
 import face_recognition
 import numpy as np
 import cv2
-
+import time
 
 name = ''
 def VidRecognition():
@@ -56,6 +56,9 @@ def VidRecognition():
         if name == "Jarne":
             print("Access granted on video recognition")
             return True
+            time.sleep(3)
+            video_capture.release()
+            cv2.destroyAllWindows()
 
     video_capture.release()
     cv2.destroyAllWindows()

@@ -1,8 +1,8 @@
 from VideoRecognition import VidRecognition
-from GUI import InitializeTkinter
+from LaunchGUI import InitializeTkinter
 
-AccessMain = VidRecognition()
-
+#AccessMain = VidRecognition()
+AccessMain = True
 
 if AccessMain == True:
     print("access granted")

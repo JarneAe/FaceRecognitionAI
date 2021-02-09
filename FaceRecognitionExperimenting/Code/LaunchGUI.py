@@ -1,6 +1,6 @@
 import tkinter as tk
-
-
+from mainGUI import InitializeMainGUI
+import time
 
 def InitializeTkinter():
 
@@ -11,11 +11,12 @@ def InitializeTkinter():
     window.attributes("-fullscreen", True)
 
     button = tk.Button(
-    text="Continue",
+    text="PRESS BUTTON TO ENTER",
     width=screenwidth,
     height=5,
     bg="#017835",
     fg="white",
+    command = lambda:[OpenMainGUI(),window.quit()]
     )
 
     label = tk.Label(
@@ -32,3 +33,7 @@ def InitializeTkinter():
     label.pack()
     
     window.mainloop()
+
+def OpenMainGUI():
+    InitializeMainGUI()
+
