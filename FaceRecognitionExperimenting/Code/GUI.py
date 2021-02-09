@@ -11,7 +11,7 @@ def InitializeTkinter():
     window.attributes("-fullscreen", True)
 
     button = tk.Button(
-    text="Click me!",
+    text="Continue",
     width=screenwidth,
     height=5,
     bg="#017835",
@@ -19,7 +19,7 @@ def InitializeTkinter():
     )
 
     label = tk.Label(
-        text="ACCES GRANTED!",
+        text="ACCESS GRANTED!",
         font=("Courier", 44),
         fg="white",
         bg="#017835",

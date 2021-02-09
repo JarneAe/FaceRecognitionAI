@@ -5,7 +5,7 @@ from GUI import InitializeTkinter
 
 
 if name == "Obama":
-    print("acces granted")
+    print("access granted")
     InitializeTkinter()
 else:
     print("acces denied")
