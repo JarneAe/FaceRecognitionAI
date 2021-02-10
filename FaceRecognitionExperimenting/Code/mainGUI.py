@@ -3,12 +3,12 @@ import tkinter as tk
 def InitializeMainGUI():
     window = tk.Tk()
 
-    newwindow = tk.Toplevel(window)
+    
 
-    labelExample = tk.Label(newwindow, text = "New Window")
+    label = tk.Label(text="test")
 
-    labelExample.pack()
-
+    
+    label.pack()
     window.mainloop()
 
 

@@ -1,14 +1,14 @@
 import face_recognition
-import numpy as np
-import cv2
+from cv2 import cv2
 import time
+import os
 
 name = ''
 def VidRecognition():
     global name
     video_capture = cv2.VideoCapture(0)
 
-    Jarne_image = face_recognition.load_image_file("Images\Jarne.jpg")
+    Jarne_image = face_recognition.load_image_file(r"Images\Jarne.jpg")
     Jarne_face_encodings = face_recognition.face_encodings(Jarne_image) [0]
 
     known_face_encodings = [
@@ -17,9 +17,8 @@ def VidRecognition():
 
     known_face_names = [
         "Jarne"
+        
     ]
-
-
 
 
     while True:
@@ -59,6 +58,17 @@ def VidRecognition():
             time.sleep(3)
             video_capture.release()
             cv2.destroyAllWindows()
+
+            textfile = open(r"logs\login logs\known_logins.txt","a")
+            textfile.write(name, " logged in at ",time.get_clock_info)
+            textfile.close()
+
+            textfile = open(r"logs\login logs\known_logins.txt","r")
+            print(textfile())
+
+
+            
+
 
     video_capture.release()
     cv2.destroyAllWindows()

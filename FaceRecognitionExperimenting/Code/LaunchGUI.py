@@ -16,7 +16,7 @@ def InitializeTkinter():
     height=5,
     bg="#017835",
     fg="white",
-    command = lambda:[OpenMainGUI(),window.quit()]
+    command = lambda:[window.destroy(),OpenMainGUI()]
     )
 
     label = tk.Label(
