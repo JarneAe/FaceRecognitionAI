@@ -2,8 +2,12 @@ import face_recognition
 from cv2 import cv2
 import time
 import os
+from datetime import datetime
 
-name = ''
+
+now = datetime.now()
+time = now.strftime("%H:%M:%S")
+name = ' '
 def VidRecognition():
     global name
     video_capture = cv2.VideoCapture(0)
@@ -53,22 +57,25 @@ def VidRecognition():
             break
         
         if name == "Jarne":
+
             print("Access granted on video recognition")
-            return True
-            time.sleep(3)
             video_capture.release()
             cv2.destroyAllWindows()
+            
+            #textfile = open(r"logs\login logs\known_logins.txt","a")
+            #textfile.write((name, " logged in at:", time))
+            
 
-            textfile = open(r"logs\login logs\known_logins.txt","a")
-            textfile.write(name, " logged in at ",time.get_clock_info)
-            textfile.close()
-
-            textfile = open(r"logs\login logs\known_logins.txt","r")
-            print(textfile())
+            #textfile = open(r"logs\login logs\known_logins.txt","r")
+            #print(textfile())
+            return True
+            
+            
 
 
             
 
-
+    
     video_capture.release()
     cv2.destroyAllWindows()
+    return name
