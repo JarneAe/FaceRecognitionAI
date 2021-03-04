@@ -8,6 +8,7 @@ from datetime import datetime
 now = datetime.now()
 time = now.strftime("%H:%M:%S")
 name = ' '
+
 def VidRecognition():
     global name
     video_capture = cv2.VideoCapture(0)
@@ -68,8 +69,7 @@ def VidRecognition():
 
             #textfile = open(r"logs\login logs\known_logins.txt","r")
             #print(textfile())
-            return True
-            
+            return name
             
 
 
@@ -79,3 +79,4 @@ def VidRecognition():
     video_capture.release()
     cv2.destroyAllWindows()
     return name
+

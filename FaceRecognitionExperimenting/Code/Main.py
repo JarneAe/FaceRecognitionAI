@@ -1,12 +1,10 @@
-from VideoRecognition import VidRecognition
+from VideoRecognition import VidRecognition,name
 from LaunchGUI import InitializeTkinter
 
-
-AccessMain = VidRecognition()
-#AccessMain = True
+VidRecognition()
 
 
-if AccessMain == True:
+if name == "Jarne":
     print("access granted")
     InitializeTkinter()
 else:

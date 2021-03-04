@@ -1,6 +1,5 @@
 import tkinter as tk
-from VideoRecognition import name
-from VideoRecognition import VidRecognition
+from VideoRecognition import VidRecognition, name
 
 
 name = VidRecognition()
@@ -16,7 +15,7 @@ def InitializeMainGUI():
     window.attributes("-fullscreen", True)
     
     label = tk.Label(
-    text=("Welcome:",name),
+    text=("Welcome: {}".format(name)),
     font=("Courier", 44),
     fg="white",
     bg="#017835",
